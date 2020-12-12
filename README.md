@@ -1,6 +1,6 @@
 # CCAPDEV Resume 
 
-One Paragraph of project description goes here
+A short semi-responsive resume built from bootstrap with a bit of jquery. With Firebase as the cloud storage and database manager, the Website can be live edited by those who have admin permissions. A separate login hub is present for seamless editing. 
 
 ## Getting Started
 
