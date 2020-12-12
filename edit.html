@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://kit.fontawesome.com/dce05b4a5e.js" crossorigin="anonymous"></script>
+  <title>Resume Updater</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="#">Resume Editor</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link form1" href="#" id="logout">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link logged-out" href="#" data-toggle="modal" data-target="#Modals1">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="modal fade" id="Modals1" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="Modals" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Editor Privileges</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="form-group">
+              <label for="email-input-known">Email address</label>
+              <input type="email" class="form-control" id="email-input-known" placeholder="Email Address"
+                aria-describedby="emailHelp" />
+            </div>
+            <div class="form-group">
+              <label for="pass-input-known">Password</label>
+              <input type="password" class="form-control" id="pass-input-known" placeholder="Password" />
+            </div>
+            <button id="old-user" class="btn btn-block btn-dark">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container " style="margin-top: 5rem;">
+    <div class="row">
+      <div class="col-md-6 form1">
+        <div class="card card-body bg-light">
+          <h1>Add School</h1>
+          <form id="schoolForm">
+            <div class="form-group">
+              <label for="school-input">School Name</label>
+              <input type="text" class="form-control" id="school-input" placeholder="eg. De La Salle University" />
+            </div>
+            <div class="form-group">
+              <label for="level-input">Level</label>
+              <input type="text" class="form-control" id="level-input" placeholder="High School" />
+            </div>
+            <div class="form-group">
+              <label for="year-input">Years</label>
+              <input type="text" class="form-control" id="year-input" placeholder="2002 - 2003" />
+            </div>
+            <div class="form-group">
+              <label for="imgschool-input">School Logo</label>
+              <input type="text" class="form-control" id="imgschool-input" />
+            </div>
+
+            <button type="submit" class="btn btn-block btn-dark">Add School</button>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 form1">
+        <div class="card card-body bg-light">
+          <h1>Add Works</h1>
+          <form id="workForm">
+            <div class="form-group">
+              <label for="work-input">Project Name</label>
+              <input type="text" class="form-control" id="work-input" placeholder="PS4 design" />
+            </div>
+            <div class="form-group">
+              <label for="img-input">Image Link</label>
+              <input type="text" class="form-control" id="img-input" />
+            </div>
+
+            <button type="submit" class="btn btn-block btn-dark">Add Works</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 form1">
+        <div class="card card-body bg-light" style="margin-top: 2rem">
+          <h1>Add Organizations</h1>
+          <form id="orgForm">
+            <div class="form-group">
+              <label for="org-input">Organization</label>
+              <input type="text" class="form-control" id="org-input" placeholder="Unicef" />
+            </div>
+            <div class="form-group">
+              <label for="img_org-input">Image Link</label>
+              <input type="text" class="form-control" id="img_org-input" />
+            </div>
+            <div class="form-group">
+              <label for="info-input">Description</label>
+              <input type="text" class="form-control" id="info-input" placeholder="This organization..." />
+            </div>
+
+            <button type="submit" class="btn btn-block btn-dark">Add Organizations</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-md-6 form1">
+        <div class="card card-body bg-light" style="margin-top: 2rem">
+          <h1>Add Contacts</h1>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="link-input">Contact Link</label>
+              <input type="text" class="form-control" id="link-input" />
+            </div>
+            <div class="form-group">
+              <label for="img_con-input">Font Awesome Class</label>
+              <input type="text" class="form-control" id="img_con-input" placeholder="eg. fab fa-facebook" />
+            </div>
+
+            <button type="submit" class="btn btn-block btn-dark">Add Contacts</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 form1">
+        <div class="card card-body bg-light" style="margin-top: 2rem">
+          <h1>Add About me</h1>
+          <form id="aboutForm">
+            <div class="form-group">
+              <label for="intro-input">About me information</label>
+              <input type="text" class="form-control" id="intro-input" />
+            </div>
+            <div class="form-group">
+              <label for="caption-input">About me caption</label>
+              <input type="text" class="form-control" id="caption-input" />
+            </div>
+
+            <button type="submit" class="btn btn-block btn-dark">Add Information</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="added" style="margin-top: 2rem; background-color: black;" class="form1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="margin-top: 1rem;">
+          <h1 style="text-align: center; font-weight: bold; color: white;">Your Added Data</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" style="justify-content: center;">
+        <div class="col-md-6 col-sm-6">
+          <div class="card-body bg-light" style="margin-bottom: 2rem;">
+            <form action="" id="deleter">
+              <div class="showcase-right">
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row kou1">
+
+        </div>
+      </div>
+      <div id="organizations">
+        <ul class="koul">
+        </ul>
+      </div>
+
+      <section id="works">
+        <div class="container-fluid">
+          <div class="row no-gutters workou">
+
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts">
+        <div class="container">
+          <div class="row">
+          </div>
+          <div class="row kountacts" style="margin-bottom: 3rem">
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </section>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBEo0J4Svu5LZVwmdz75BY8NrTl0vRDyNs",
+      authDomain: "ccapdevproj.firebaseapp.com",
+      databaseURL: "https://ccapdevproj.firebaseio.com",
+      projectId: "ccapdevproj",
+      storageBucket: "ccapdevproj.appspot.com",
+      messagingSenderId: "108169251140",
+      appId: "1:108169251140:web:45dad3084e36ff8fe4ef11",
+      measurementId: "G-3HPLQ8833J",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    db.settings({
+      timestampsInSnapshots: true,
+    });
+  </script>
+
+  <script src="auth.js"></script>
+  <script src="index.js"></script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
